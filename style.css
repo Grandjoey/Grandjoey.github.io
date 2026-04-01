@@ -1,0 +1,58 @@
+html { position: relative; overflow: hidden; font-style: italic;}
+
+body { background-color: rgb(0, 0, 0); background-position: center; background-attachment: fixed; height: 100vh; color: #b73e3e;}
+textarea { background: transparent; border: none; resize: none; outline: none; font-family: cursive;}
+img { max-width: 100%; object-fit: contain; }
+div { transform: scale(0.8); }
+
+#spoon { align-items: center; width: 400px; height: 500px; image-rendering: smooth; }
+#spoon:hover { cursor: wait; animation-name: spinspoon; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); animation-direction: alternate-reverse;}
+#back_arrow { z-index: 5; position:fixed; bottom: 0; transition: transform 0.2s ease-in-out;}
+#back_arrow:hover { transform: translateY(-15px); }
+#far_house { animation-name: up_to_housey; animation-duration: 2.8s; animation-timing-function: cubic-bezier(0.22, 0, 0.58, 1); }
+
+#pagey { background-image: url(images/page.png); background-size: contain; background-position: center; background-repeat: no-repeat; padding: 10px; width: 280px; height: 200px; object-fit: fill;}
+
+.floatuppage { position: fixed; right: 0; transition: transform 0.3s ease-in-out; display: flex;}
+.floatuppage:hover { transform: translateX(-60%); }
+
+.center-object {
+  display: flex;
+  flex-wrap: nowrap; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}   
+
+.object-highight:hover {
+    animation: glow 1.1s infinite alternate; animation-timing-function: cubic-bezier(0.49, 0.08, 0.49, 0.96);
+}
+
+.mailbox_off {
+    opacity: 0;
+  }
+
+.mailbox_on {
+    animation: mailbox_light_on 2.3s infinite; animation-timing-function: cubic-bezier(0.49, 0.08, 0.49, 0.96);
+  }
+
+@keyframes spinspoon{ 
+    from{transform: translateX(200%) rotatez(360deg) scale(0.4); filter: blur(10px) opacity(10%); }
+ }
+
+@keyframes glow{
+  from { filter: drop-shadow(0 0 0.0rem #f9efc0eb); }
+  to { filter: drop-shadow(0 0 0.75rem #f9efc0eb); }
+}
+
+@keyframes up_to_housey{
+  from { transform: scale(0.6); filter: blur(10px) opacity(20%); }
+}
+
+@keyframes mailbox_light_on{
+  0%   { opacity: 0; filter: hue-rotate(0px) blur(0px); }
+  50%  { opacity: 1; filter: hue-rotate(500px) blur(10px); }
+  100% { opacity: 0; filter: hue-rotate(0px) blur(0px); }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>spoon screen</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images\avatar 2021 low res.png" type="image/png">
+    </head>
+    <body class="center-object">
+        <audio id="screamo" src="girl-screaming_01.wav"></audio>
+
+        <h1>mofo</h1>
+        <div>
+            <a href="up_to_house.html" >
+                <img alt='sponer' id= "spoon" src="images\spoon.png" />
+            </a>
+        </div>
+            <a id="scrayguy" href="house_over_there.html" >
+                <img alt='back arrow' src='images\horror.jpg' style='width: 80px; height: 60px; image-rendering: smooth; '>
+            </a>
+        <script>
+            const audio = document.getElementById("screamo");
+            const element = document.getElementById("scrayguy");
+
+            element.addEventListener("mouseenter", () => audio.play());
+            element.addEventListener("mouseleave", () => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+        </script>
+    </body>
+</html>

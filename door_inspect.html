@@ -27,8 +27,8 @@
             <button id="doorknob" alt="knob" style="  z-index: 4; position: absolute; right: 15%; top: 49%; width: 10%; height: 12%; cursor: pointer; background: none; border: none;"
             onclick="document.getElementById('doorknobnoise').play()"></button>
         </div>
-            <a id="back_arrow" href="front_door.html">
-                <img alt='back arrow' src='images\back_arrow.png' style='width: 60px; height: 70px;'>
+            <a id="back_arrow" href="front_door.html" onclick="this.style.pointerEvents = 'none';">
+                <img alt='back arrow' src='images\back_arrow.gif' style='width: 60px; height: 70px;'>
             </a>
         <script>
                 const link = document.getElementById('back_arrow');

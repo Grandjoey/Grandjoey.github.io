@@ -12,6 +12,7 @@
     <body class="center-object">
         <audio id="walkback" src="walking.mp3" preload="auto"></audio>
         <audio id="radbuttionnoise" src="button-2.mp3" preload="auto"></audio>
+        <audio id="doorknobnoise" src="knoblock.mp3" preload="auto"></audio>
         <div class="center-object" style="scale: 1.3;">
             <img id="button1pic" alt='b1' src="images\door_puzzle_b1.png" style=" z-index: 1; height: 100%; position: absolute;"/>
             <img id="button2pic" alt='b2' src="images\door_puzzle_b2.png" style=" z-index: 1; height: 100%; position: absolute;"/>
@@ -23,6 +24,8 @@
             onclick="b2Function()"></button>
             <button id="button3" alt="butto3" style=" z-index: 4; position: absolute; right: 34%; top: 50%; width: 8%; height: 12%; cursor: pointer; background: none; border: none;"
             onclick="b3Function()"></button>
+            <button id="doorknob" alt="knob" style="  z-index: 4; position: absolute; right: 15%; top: 49%; width: 10%; height: 12%; cursor: pointer; background: none; border: none;"
+            onclick="document.getElementById('doorknobnoise').play()"></button>
         </div>
             <a id="back_arrow" href="front_door.html">
                 <img alt='back arrow' src='images\back_arrow.png' style='width: 60px; height: 70px;'>

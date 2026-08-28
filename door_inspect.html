@@ -14,67 +14,23 @@
         <audio id="radbuttionnoise" src="button-2.mp3" preload="auto"></audio>
         <audio id="doorknobnoise" src="knoblock.mp3" preload="auto"></audio>
         <div class="center-object" style="scale: 1.3;">
-            <img id="button1pic" alt='b1' src="images\door_puzzle_b1.png" style=" z-index: 1; height: 100%; position: absolute;"/>
-            <img id="button2pic" alt='b2' src="images\door_puzzle_b2.png" style=" z-index: 1; height: 100%; position: absolute;"/>
-            <img id="button3pic" alt='b3' src="images\door_puzzle_b3.png" style=" z-index: 1; height: 100%; position: absolute;"/>
-            <img src="images\door_puzzle.png" alt="door" style=" z-index: 0; height: 100%;">
-            <button id="button1" alt="butto1" style=" z-index: 4; position: absolute; left: 34%; top: 50%; width: 8%; height: 12%; cursor: pointer; background: none; border: none;" 
-            onclick="b1Function()"></button>
-            <button id="button2" alt="butto2" style="  z-index: 4; position: absolute; top: 50%; width: 8%; height: 12%; cursor: pointer; background: none; border: none;"
-            onclick="b2Function()"></button>
-            <button id="button3" alt="butto3" style=" z-index: 4; position: absolute; right: 34%; top: 50%; width: 8%; height: 12%; cursor: pointer; background: none; border: none;"
-            onclick="b3Function()"></button>
-            <button id="doorknob" alt="knob" style="  z-index: 4; position: absolute; right: 15%; top: 49%; width: 10%; height: 12%; cursor: pointer; background: none; border: none;"
-            onclick="document.getElementById('doorknobnoise').play()"></button>
+            <img id="d1_knob" alt='knoba' src="images\door1_doorknob.png" style=" z-index: 1; position: absolute; right: 16%; top: 49%; width: 10%;"/>
+            <img src="images\door_puzzle_2.png" alt="door" style=" z-index: 0; height: 100%;">
+            <button id="button1" class="buttonopic" alt="butto1" style=" z-index: 4; position: absolute; left: 32.6%; top: 54%; width: 7%; cursor: pointer; background: none; border: none;">
+                <img id="button1pic" alt='b1' src="images\door_puzzle_b1.png" style=" position: absolute; width: 55%;"/>
+            </button>
+            <button id="button2" class="buttonopic" alt="butto2" style=" z-index: 4; position: absolute; left: 44.5%; top: 54%; width: 7%; cursor: pointer; background: none; border: none;">
+                <img  id="button2pic" alt='b2' src="images\door_puzzle_b2.png" style=" position: absolute; width: 55%;"/>
+            </button>
+            <button id="button3" class="buttonopic" alt="butto3" style=" z-index: 4; position: absolute; left: 56.2%; top: 54%; width: 7%; cursor: pointer; background: none; border: none;">
+                <img id="button3pic" alt='b3' src="images\door_puzzle_b3.png" style=" position: absolute; width: 55%;"/>
+            </button>
+            <button id="doorknob" alt="knob" style="  z-index: 4; position: absolute; right: 15%; top: 49%; width: 12%; height: 16%; cursor: pointer; background: none; border: none;">
+            </button>
         </div>
             <a id="back_arrow" href="front_door.html" onclick="this.style.pointerEvents = 'none';">
                 <img alt='back arrow' src='images\back_arrow.gif' style='width: 60px; height: 70px;'>
             </a>
-        <script>
-                const link = document.getElementById('back_arrow');
-                const audio = document.getElementById('walkback');
-
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    audio.currentTime = 0;
-                    audio.play().catch(() => {
-                    // Fallback: navigate immediately if audio fails
-                    window.location.href = link.href;
-                    });
-
-                    audio.addEventListener('ended', () => {
-                    window.location.href = link.href;
-                    }, { once: true });
-
-                });
-            var buttonnoise = document.getElementById('radbuttionnoise')
-            var button1pi = document.getElementById('button1pic');
-            var button2pi = document.getElementById('button2pic');
-            var button3pi = document.getElementById('button3pic');
-            function b1Function() {
-                buttonnoise.play()
-                if (button1pi.style.opacity = 0) {
-                    button1pi.style.opacity = 1
-                } else {
-                    button1pi.style.opacity = 0
-                }
-            };
-            function b2Function() {
-                buttonnoise.play()
-                if (button2pi.style.opacity = 0) {
-                    button2pi.style.opacity = 1
-                } else {
-                    button2pi.style.opacity = 0
-                }
-            };
-            function b3Function() {
-                buttonnoise.play()
-                if (button3pi.style.opacity = 0) {
-                    button3pi.style.opacity = 1
-                } else {
-                    button3pi.style.opacity = 0
-                }
-            };
-        </script>
+        <script src="interactions.js" async defer></script>
     </body>
 </html>

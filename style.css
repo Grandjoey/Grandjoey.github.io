@@ -67,3 +67,6 @@ div { transform: scale(0.8); }
   100% { opacity: 0; filter: hue-rotate(0px) blur(0px); }
 }
 
+.btn-mticket {
+  z-index: 4; position: absolute; left: 31%; top: 58%; width: 12%; height: 22%; cursor: pointer; background: none; border: none; opacity: 0;
+}
